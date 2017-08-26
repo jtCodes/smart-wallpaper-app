@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.aoi.myapplication.MainActivity">
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="1"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="none"
+        android:listSelector="@null"
+        />
+    <include layout="@layout/content_main" />
+
+    <View android:id="@+id/stripBelowToolbar"
+        android:layout_height="0dp"
+        android:layout_width="fill_parent"/>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:mtf_openKeyboardOnFocus="false"
+        >
+
+        <EditText
+            android:id="@+id/editText"
+            android:inputType="text"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            android:textColor="#333"
+            android:textColorHint="#666"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+</android.support.design.widget.CoordinatorLayout>
